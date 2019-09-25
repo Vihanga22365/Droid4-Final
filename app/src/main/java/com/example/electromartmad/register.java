@@ -13,8 +13,6 @@ import android.widget.Toast;
 
 public class register extends AppCompatActivity {
 
-    EditText ET_Name , ET_Email , ET_UserName , ET_Password , ET_ConfirmPassword;
-    Button btnSignUp ;
 
     DatabaseHelper helper = new DatabaseHelper(this);
 
@@ -40,10 +38,6 @@ public class register extends AppCompatActivity {
                 String PasswordStr = ET_Password.getText().toString();
                 String ConfirmPasswordStr = ET_ConfirmPassword.getText().toString();
 
-                if(!validateUserName() | !validateEmail() | !validatePassword() | !confirmPassword())
-                {
-                    return;
-                }
 
                 if (PasswordStr.equals(null)) {
                     Toast.makeText(register.this, "Should not be Null", Toast.LENGTH_SHORT).show();
@@ -72,76 +66,6 @@ public class register extends AppCompatActivity {
         });
     }
 
-    private boolean validateUserName() {
-
-        String userNameInput = ET_UserName.getEditableText().toString().trim();
-
-        if (userNameInput.isEmpty()) {
-
-            ET_UserName.setError("User Name field can't be empty");
-            return false;
-
-        }
-        else if(userNameInput.length()>10) {
-
-            ET_UserName.setError("User Name is too long");
-            return false;
-
-        }
-
-        else {
-
-            ET_UserName.setError(null);
-            return true;
-        }
-    }
-
-    private boolean validateEmail() {
-
-        String emailInput = ET_Email.getEditableText().toString().trim();
-
-        if (emailInput.isEmpty()) {
-
-            ET_Email.setError("Email field can't be empty");
-            return false;
-
-        } else {
-
-            ET_Email.setError(null);
-            return true;
-        }
-    }
-
-    private boolean validatePassword() {
-
-        String passwordInput = ET_Password.getEditableText().toString().trim();
-
-        if (passwordInput.isEmpty()) {
-
-            ET_Password.setError("Password field can't be empty");
-            return false;
-
-        } else {
-
-            ET_Password.setError(null);
-            return true;
-        }
-    }
-    private boolean confirmPassword() {
-
-        String confirmPasswordInput = ET_ConfirmPassword.getEditableText().toString().trim();
-
-        if (confirmPasswordInput.isEmpty()) {
-
-            ET_ConfirmPassword.setError("Password must be confirmed");
-            return false;
-
-        } else {
-
-            ET_ConfirmPassword.setError(null);
-            return true;
-        }
-    }
 
 
 }
