@@ -28,17 +28,20 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.497"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/ET_UserName" />
+            app:layout_constraintTop_toBottomOf="@+id/ET_Email" />
 
         <EditText
             android:id="@+id/ET_Name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
             android:drawableLeft="@drawable/username"
             android:ems="10"
             android:inputType="textPersonName"
+            android:paddingRight="20dp"
             android:paddingBottom="15dp"
             app:layout_constraintBaseline_toBaselineOf="@+id/tv_Name"
             app:layout_constraintEnd_toEndOf="parent"
@@ -48,11 +51,14 @@
             android:id="@+id/ET_Email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
             android:drawableLeft="@drawable/email"
             android:ems="10"
             android:inputType="textEmailAddress"
+            android:paddingRight="20dp"
             android:paddingBottom="15dp"
             app:layout_constraintBaseline_toBaselineOf="@+id/tv_Email"
             app:layout_constraintEnd_toEndOf="parent"
@@ -62,11 +68,14 @@
             android:id="@+id/ET_ConfirmPassword"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
             android:drawableLeft="@drawable/password"
             android:ems="10"
             android:inputType="textPassword"
+            android:paddingRight="20dp"
             android:paddingBottom="15dp"
             app:layout_constraintBaseline_toBaselineOf="@+id/tv_ConfirmPassword"
             app:layout_constraintEnd_toEndOf="parent"
@@ -124,7 +133,7 @@
             android:textColor="#1A237E"
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_Name" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_ConfirmPassword" />
 
         <TextView
         android:id="@+id/textView7"
@@ -152,20 +161,7 @@
             android:textColor="#1A237E"
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_Email" />
-
-        <EditText
-            android:id="@+id/ET_Password"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:drawableLeft="@drawable/password"
-            android:ems="10"
-            android:inputType="textPersonName"
-            app:layout_constraintBaseline_toBaselineOf="@+id/tv_Password"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/barrier" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_UserName" />
 
         <TextView
             android:id="@+id/tv_UserName"
@@ -179,17 +175,20 @@
             android:textColor="#1A237E"
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_ConfirmPassword" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_Name" />
 
         <EditText
             android:id="@+id/ET_UserName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp"
             android:drawableLeft="@drawable/delivaryname"
             android:ems="10"
             android:inputType="textPersonName"
+            android:paddingRight="20dp"
             app:layout_constraintBaseline_toBaselineOf="@+id/tv_UserName"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/barrier" />
@@ -201,6 +200,23 @@
             app:barrierDirection="end"
             app:constraint_referenced_ids="tv_Name,tv_ConfirmPassword,tv_Email,tv_Password,tv_UserName"
             tools:layout_editor_absoluteX="411dp" />
+
+        <EditText
+            android:id="@+id/ET_Password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:drawableLeft="@drawable/password"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:paddingRight="20dp"
+            android:paddingBottom="15dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/tv_Password"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/barrier" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

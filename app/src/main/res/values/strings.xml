@@ -21,4 +21,6 @@
     <string name="title_activity_cashpayment">Cash Payment</string>
     <string name="title_activity_cardpayment">Card Payment</string>
     <string name="title_activity_rating">Rating</string>
+    <string name="title_activity_additem">Add Item</string>
+    <string name="title_activity_itemlist">Item List</string>
 </resources>
