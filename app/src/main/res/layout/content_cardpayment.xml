@@ -13,25 +13,23 @@
         android:layout_height="match_parent">
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/button_add"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="30dp"
-            android:text="Submit Details"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
             android:background="@drawable/custom_button1"
             android:fontFamily="@font/bree_serif"
+            android:padding="15dp"
+            android:text="Submit Details"
             android:textColor="#ffffff"
             android:textSize="18dp"
-            android:padding="15dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText8" />
+            app:layout_constraintTop_toBottomOf="@+id/CRnumber" />
 
         <EditText
-            android:id="@+id/editText6"
+            android:id="@+id/CRtype"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -47,7 +45,7 @@
             app:layout_constraintStart_toEndOf="@+id/barrier2" />
 
         <EditText
-            android:id="@+id/editText7"
+            android:id="@+id/CRname"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -63,7 +61,7 @@
             app:layout_constraintStart_toEndOf="@+id/barrier2" />
 
         <EditText
-            android:id="@+id/editText8"
+            android:id="@+id/CRnumber"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
@@ -80,8 +78,8 @@
 
         <ImageView
             android:id="@+id/imageView9"
-            android:layout_width="282dp"
-            android:layout_height="217dp"
+            android:layout_width="237dp"
+            android:layout_height="118dp"
             android:layout_marginTop="30dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
@@ -152,6 +150,98 @@
             app:barrierDirection="end"
             app:constraint_referenced_ids="textView13,textView14,textView15"
             tools:layout_editor_absoluteX="411dp" />
+
+        <Button
+            android:id="@+id/button_show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/custom_button1"
+            android:fontFamily="@font/bree_serif"
+            android:padding="15dp"
+            android:text="Show Data"
+            android:textColor="#ffffff"
+            android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/CRnumber" />
+
+        <TextView
+            android:id="@+id/textView31"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/bree_serif"
+            android:text="Enter ID"
+            android:textColor="#1A237E"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView32" />
+
+        <TextView
+            android:id="@+id/textView32"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="52dp"
+            android:layout_marginRight="52dp"
+            android:fontFamily="@font/cantora_one"
+            android:text="Enter ID for Update Or Delete"
+            android:textColor="#1A237E"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_add" />
+
+        <EditText
+            android:id="@+id/CRid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:drawableLeft="@drawable/password"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:paddingBottom="15dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView31"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/barrier3" />
+
+        <Button
+            android:id="@+id/button_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="70dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/custom_button1"
+            android:fontFamily="@font/bree_serif"
+            android:padding="15dp"
+            android:text="Update"
+            android:textColor="#ffffff"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/CRid" />
+
+        <Button
+            android:id="@+id/button_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="70dp"
+            android:layout_marginRight="70dp"
+            android:layout_marginBottom="21dp"
+            android:background="@drawable/custom_button1"
+            android:fontFamily="@font/bree_serif"
+            android:padding="15dp"
+            android:text="Delete"
+            android:textColor="#ffffff"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </ScrollView>

@@ -10,28 +10,95 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="32dp"
+        tools:layout_editor_absoluteY="-44dp">
+
 
         <Button
-            android:id="@+id/button7"
+            android:id="@+id/ViewAll"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="20dp"
-            android:text="Submit"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
             android:background="@drawable/custom_button1"
             android:fontFamily="@font/bree_serif"
+            android:padding="15dp"
+            android:text="Show Data"
             android:textColor="#ffffff"
             android:textSize="18dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText_rating" />
+
+        <Button
+            android:id="@+id/Delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/custom_button1"
+            android:fontFamily="@font/bree_serif"
             android:padding="15dp"
+            android:text="Delete"
+            android:textColor="#ffffff"
+            android:textSize="18dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintTop_toBottomOf="@+id/textView31" />
+
+        <Button
+            android:id="@+id/ViewUpdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/custom_button1"
+            android:fontFamily="@font/bree_serif"
+            android:padding="15dp"
+            android:text="Update"
+            android:textColor="#ffffff"
+            android:textSize="18dp"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editText9" />
+            app:layout_constraintTop_toBottomOf="@+id/textView31" />
+
+        <Button
+            android:id="@+id/AddData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/custom_button1"
+            android:fontFamily="@font/bree_serif"
+            android:padding="15dp"
+            android:text="Submit"
+            android:textColor="#ffffff"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText_rating" />
 
         <EditText
-            android:id="@+id/editText9"
+            android:id="@+id/edit_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:drawableLeft="@drawable/password"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:paddingBottom="15dp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView31"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/barrier3" />
+
+        <EditText
+            android:id="@+id/editText_rating"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
@@ -45,7 +112,7 @@
             app:layout_constraintStart_toEndOf="@+id/barrier5" />
 
         <EditText
-            android:id="@+id/editText10"
+            android:id="@+id/editText_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
@@ -56,10 +123,11 @@
             android:paddingBottom="15dp"
             app:layout_constraintBaseline_toBaselineOf="@+id/textView20"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.476"
             app:layout_constraintStart_toEndOf="@+id/barrier5" />
 
         <EditText
-            android:id="@+id/editText11"
+            android:id="@+id/editText_email"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
@@ -73,7 +141,7 @@
             app:layout_constraintStart_toEndOf="@+id/barrier5" />
 
         <EditText
-            android:id="@+id/editText12"
+            android:id="@+id/editText_comments"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
@@ -89,14 +157,40 @@
 
         <ImageView
             android:id="@+id/imageView12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
+            android:layout_width="232dp"
+            android:layout_height="128dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView24"
             app:srcCompat="@drawable/feedback" />
+
+        <TextView
+            android:id="@+id/textView31"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/bree_serif"
+            android:text="Enter ID"
+            android:textColor="#1A237E"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView32" />
+
+        <TextView
+            android:id="@+id/textView32"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/cantora_one"
+            android:text="Enter ID for Update Or Delete"
+            android:textColor="#1A237E"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/AddData" />
 
         <TextView
             android:id="@+id/textView20"
@@ -104,7 +198,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="28dp"
             android:fontFamily="@font/amaranth"
             android:text="Your Name"
             android:textColor="#1A237E"
@@ -171,13 +265,12 @@
             android:id="@+id/textView24"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="4dp"
             android:fontFamily="@font/cantora_one"
             android:text="Give Us Your rating"
             android:textColor="#1A237E"
             android:textSize="30sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
