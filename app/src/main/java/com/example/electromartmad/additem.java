@@ -17,6 +17,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.app.ActivityCompat;
 
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -33,6 +34,7 @@ public class additem extends AppCompatActivity {
     EditText edtName, edtPrice;
     Button btnChoose, btnAdd, btnList;
     ImageView imageView;
+    Boolean EditTextEmptyHold;
 
     final int REQUEST_CODE_GALLERY = 999;
 
@@ -74,19 +76,41 @@ public class additem extends AppCompatActivity {
         btnAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                try{
-                    sqLiteHelper.insertData(
-                            edtName.getText().toString().trim(),
-                            edtPrice.getText().toString().trim(),
-                            imageViewToByte(imageView)
-                    );
-                    Toast.makeText(getApplicationContext(), "Added successfully!", Toast.LENGTH_SHORT).show();
-                    edtName.setText("");
-                    edtPrice.setText("");
-                    imageView.setImageResource(R.mipmap.ic_launcher);
+
+                EditText edtName = (EditText) findViewById(R.id.edtName);
+                EditText edtPrice = (EditText) findViewById(R.id.edtPrice);
+                ImageView imageView = (ImageView) findViewById(R.id.imageView);
+
+                String Name = edtName.getText().toString();
+                String Price = edtPrice.getText().toString();
+
+                if (imageView.getDrawable() == null)
+                {
+                    Toast.makeText(additem.this, "Need To Add Image", Toast.LENGTH_SHORT).show();
+                    return;
                 }
-                catch (Exception e){
-                    e.printStackTrace();
+
+
+                if (TextUtils.isEmpty(Name) || TextUtils.isEmpty(Price))
+                {
+                    Toast.makeText(additem.this, "Field Should not be Null", Toast.LENGTH_SHORT).show();
+                    return;
+                }else {
+
+
+                    try {
+                        sqLiteHelper.insertData(
+                                edtName.getText().toString().trim(),
+                                edtPrice.getText().toString().trim(),
+                                imageViewToByte(imageView)
+                        );
+                        Toast.makeText(getApplicationContext(), "Added successfully!", Toast.LENGTH_SHORT).show();
+                        edtName.setText("");
+                        edtPrice.setText("");
+                        imageView.setImageResource(R.drawable.addlaptop);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
                 }
             }
         });
@@ -153,6 +177,22 @@ public class additem extends AppCompatActivity {
         btnAdd = (Button) findViewById(R.id.btnAdd);
         btnList = (Button) findViewById(R.id.btnList);
         imageView = (ImageView) findViewById(R.id.imageView);
+    }
+
+    public void CheckEditTextStatus(){
+
+        String Name = edtName.getText().toString() ;
+        String Price = edtPrice.getText().toString();
+
+        if(TextUtils.isEmpty(Name) || TextUtils.isEmpty(Price)){
+
+            EditTextEmptyHold = false ;
+
+        }
+        else {
+
+            EditTextEmptyHold = true ;
+        }
     }
 
 }

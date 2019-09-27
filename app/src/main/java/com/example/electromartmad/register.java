@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -39,8 +40,10 @@ public class register extends AppCompatActivity {
                 String ConfirmPasswordStr = ET_ConfirmPassword.getText().toString();
 
 
-                if (PasswordStr.equals(null)) {
-                    Toast.makeText(register.this, "Should not be Null", Toast.LENGTH_SHORT).show();
+                if (TextUtils.isEmpty(NameStr) || TextUtils.isEmpty(EmailStr) || TextUtils.isEmpty(UserNameStr) || TextUtils.isEmpty(PasswordStr) || TextUtils.isEmpty(ConfirmPasswordStr) ) {
+                    Toast.makeText(register.this, "Field Should not be Null", Toast.LENGTH_SHORT).show();
+                    return;
+
                 }
 
                 if (!PasswordStr.equals(ConfirmPasswordStr)) {
@@ -65,6 +68,8 @@ public class register extends AppCompatActivity {
             }
         });
     }
+
+
 
 
 
