@@ -66,7 +66,7 @@ public class rating extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         Integer deletedRows = myDb.deleteData(editTextId.getText().toString());
-                        if(deletedRows > 0)
+                        if (deletedRows > 0)
                             Toast.makeText(rating.this, "Data is deleted", Toast.LENGTH_LONG).show();
                         else
                             Toast.makeText(rating.this, "Data is not deleted", Toast.LENGTH_LONG).show();
@@ -76,8 +76,6 @@ public class rating extends AppCompatActivity {
                 }
         );
     }
-
-
     public void UpdateData(){
         btnviewUpdate.setOnClickListener(
                 new View.OnClickListener() {
